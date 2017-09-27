@@ -9,6 +9,14 @@ title: Christopher J. Fullerton
 	impossible. Having equilibrated a glass at in this previously impossible to reach region, the difficulty is now studying it effectively. To make observations
 	of the 'real' behaviour of the system, regular simulations (without swap moves) must be used and the slow dynamics returns. Thus some kind of 'destructive'
 	testing is employed - compressing the glass further to search for a Gardner transition, shearing it until it breaks or (in my case) melting it.</p>
+	<p>Recently I have shown that simulated glasses prodiced by the swap algorithm can be as stable as those made in vapor deposition experiments, which are the
+	most stable glasses that we know of. It also turns out that to measure the stability correctly, constant pressure simulations should be carried out. Constant
+	pressure is of course the ensemble in which most experiments are carried out, but when performing simulations we tend to take the easy route and perform them 
+	at constant volume. However, the increased stability of glasses produced using the swap algorithm only becomes apparent if we melt them at constant pressure.
+	If they are melted at constant volume, they appear to be just as stable as ordinary simulated glasse.</p>
+	<p>I have worked with the swap algorithm in monte carlo simulations, but have also written an extension that adds it to LAMMPS allowing larger systems to be 
+	studied. I plan to make this extension publicly available soon. I am currently looking at the character of the melting process of ultrastable Lennard-Jones
+	glasses as well as using the swap algorithm to probe a system that exhibits both an attractive and a repulsive glass transition.</p>
 	<h2>Glasses with unusually slow dynamics (transition path sampling)</h2>
 	<p>More to come!</p>
 	<h2>Optimising self assembly</h2>
