@@ -4,26 +4,38 @@ title: Christopher J. Fullerton
 ---
 <div class="blurb">
 	<h1>Research Interests</h1>
-	<h2>Ultrastable glasses and the swap algorithm</h2>
-	<p>The swap algorithm makes it possible to equilibrate simulated glasses at high packing fractions and low temperatures where it was previously 
-	impossible. Having equilibrated a glass at in this previously impossible to reach region, the difficulty is now studying it effectively. To make observations
-	of the 'real' behaviour of the system, regular simulations (without swap moves) must be used and the slow dynamics returns. Thus some kind of 'destructive'
-	testing is employed - compressing the glass further to search for a Gardner transition, shearing it until it breaks or (in my case) melting it.</p>
-	<p>Recently I have shown that simulated glasses prodiced by the swap algorithm can be as stable as those made in vapor deposition experiments, which are the
-	most stable glasses that we know of. It also turns out that to measure the stability correctly, constant pressure simulations should be carried out. Constant
-	pressure is of course the ensemble in which most experiments are carried out, but when performing simulations we tend to take the easy route and perform them 
-	at constant volume. However, the increased stability of glasses produced using the swap algorithm only becomes apparent if we melt them at constant pressure.
-	If they are melted at constant volume, they appear to be just as stable as ordinary simulated glasse.</p>
-	<p>I have worked with the swap algorithm in monte carlo simulations, but have also written an extension that adds it to LAMMPS allowing larger systems to be 
-	studied. I plan to make this extension publicly available soon. I am currently looking at the character of the melting process of ultrastable Lennard-Jones
-	glasses as well as using the swap algorithm to probe a system that exhibits both an attractive and a repulsive glass transition.</p>
+	<p>This page contains a summary of my research interests, which lie broadly within statistical mechanics, more specifically within systems with unusual collective behaviour and more exactly in the areas of glassy physics and self assembly.
+	The three areas at the top of the page are where my current research is focussed.
+	</p>
+	<h2>Melting ultrastable glasses</h2>
+	<p>
+	As the temperature of supercooled liquids is reduced, their relaxation times increase dramatically and they become incredibly stable without developing an ordered structure.
+	This dramatic slowing down makes studying glasses at low temperatures to determine the source of their stability extremely difficult.
+	Recently, the swap algorithm has been used to equilibrate supercooled liquids to temperatures below the experimental glass transition temperature.
+	If you know anything about simulating glasses, this is a remarkable achievement.
+	</p>
+	<p>
+	Having used the swap algorithm to rapidly thermalise a supercooled liquid, the question remains as to what you can do with it.
+	To make any measurements involving real dynamics you cannot use the swap algorithm so this leaves you with a thermalised glass with a typical relaxation time many decades longer than you can measure.
+	Various forms of destructive testing are ideal for testing the properties of these unique systems - we can learn a lot about glasses by watching how they fall apart.
+	</p>
+	<p>
+	Inspired by measurements of the kinetic stability of thin films produced by vapor deposition experiments, I have melted hard sphere glasses produced using the swap algorithm.
+	Doing this in the correct ensemble (at constant pressure) reveals the role of a stable glass's high density (compared to the liquid it is trying to melt to) in making it so stable.
+	I measured kinetic stabilities for these hard sphere glasses comparable to the largest kinetic stabilities measured in experiments, a world record for simulated glasses.
+	The melting process of ultrastable glasses remains to be understood, and doing so will reveal much about the nature of glasses themselves.
+	To explore this further, I have begun producing Lennard Jones glasses using the swap algorithm.
+	</p>
+	<h2>The swap algorithm in LAMMPS</h2>
+	<p>
+	To better explore Lennard Jones glasses with large system sizes, I have implimented the swap algorithm as a fix in LAMMPS.
+	This presents an interesting problem where molecular dynamics and monte carlo dynamics are hybridised, and using the fix efficiently means optimising many parameters.
+	I hope to make the code containing the fix public in the near future, along with instructions for using it effectively.
+	</p>
+	<h2>The interplay between glassy dynamics and gelation</h2>
+	<p>More to come</p>
 	<h2>Glasses with unusually slow dynamics (transition path sampling)</h2>
-	<p>There are other methods to generate extremely stable glasses. One which is extremely interest inolves the use of transition path sampling. In this method,
-	a simulation is run which operates on an ensemble of trajectories. For a trajectory of our system, we can calculate a figure of merit - for example an activity
-	measurement which tells how much the structure of the glass changes during a trajectory. In transition path sampling, new trajectories are generated from old ones
-	and accepted or rejected through a Metropolis rule where a biasing field is coupled to the figure of merit (activity here).</p>
+	<p></p>
 	<h2>Optimising self assembly</h2>
-	<p>More to come!</p>
-	<h2>Gelation</h2>
 	<p>More to come!</p>
 </div><!-- /.blurb -->
